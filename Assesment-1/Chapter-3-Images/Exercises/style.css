@@ -1,0 +1,29 @@
+figcaption {
+    font-size: small;
+    background-color: darkgray;
+}
+body {background-color: darkolivegreen;}
+h1 {text-align: center;
+    background-color: darkgray;
+}
+h2 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+
+.image-gallery {
+    display: flex;
+    gap: 20px
+}
+
+.image-gallery figure {
+    margin: 100px 0;
+    text-align: center;
+}
+
+.image-gallery img {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
