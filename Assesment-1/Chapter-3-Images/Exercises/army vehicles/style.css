@@ -1,28 +1,32 @@
-figcaption {
+figcaption { /*Sets the figcaption to small with a gray background*/
     font-size: small;
     background-color: darkgray;
 }
-body {background-color: darkolivegreen;}
-h1 {text-align: center;
+
+body {background-color: darkolivegreen;} /*sets the background color to green*/
+
+h1 {text-align: center; /*aligns the title to the center with a gray background*/
     background-color: darkgray;
 }
-h2 {
+
+h2 { /*aligns the header 2 text to the center with a font-size set to xx-large*/
     text-align: center;
     font-size: xx-large;
 }
 
 
-.image-gallery {
+.image-gallery { /*aligns the images into one line*/
     display: flex;
     gap: 20px
 }
 
-.image-gallery figure {
-    margin: 100px 0;
+.image-gallery figure {/*Aligns the texts to the center*/
     text-align: center;
 }
 
-.image-gallery img {
+.image-gallery img {/*adjusts the spacings of the images with box-shadows below the images*/
+    margin-right: -40px;
+    margin-left: -40px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease;
 }

@@ -1,10 +1,10 @@
-body {background: #8B4513;} 
-h1 {background-color: #d35400;
+body {background: #8B4513;} /*displays the background as brown*/
+h1 {background-color: #d35400; /*displays the background, size and alignment of the title*/
     font-size: xx-large;
     text-align: center;
 }
-
-.container {
+ 
+.container { /*creates a box in the middle where all of the content will be diplayed in*/
     max-width: 800px;
     margin: auto;
     padding: 20px;
@@ -14,18 +14,18 @@ h1 {background-color: #d35400;
 
 }
 
-.container figure {
+.container figure { /*Aligns the images to the center*/
     margin: 0;
     text-align: center;
 }
 
-.container img {
+.container img { /*creates gaps between the two images*/
     display: center;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-footer {
+footer { /*creates a footer with a background color, small font size and aligned at the center */
     background-color: #d35400;
     font-size: small;
     text-align: center;
