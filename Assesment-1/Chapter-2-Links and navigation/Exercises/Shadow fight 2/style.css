@@ -1,4 +1,8 @@
-body {background-color: darkslategrey;}
+body {
+    background-image: url("shadowfight 2 wallpaper.png");
+    background-size: cover;
+    background-position: center;
+}
 
 h1 {color: black; 
     background-color: darkred; 

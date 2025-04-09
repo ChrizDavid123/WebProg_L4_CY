@@ -20,7 +20,16 @@ h1 {background-color: #d35400;
 }
 
 .container img {
-    display: block;
-    margin: 0 auto;
+    display: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+
+footer {
+    background-color: #d35400;
+    font-size: small;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: -15px;
+}   
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Petrol Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div id="wrapper"> <!--Labels the entire code "Wrapper" for styling purposes-->
+            <header>
+                <h1>Petrol Calculator</h1>
+            </header>
+
+            <main>
+                <h3>Please enter the cost of petrol per liter and then the amount of petrol purchased below...</h3> 
+                <p>Enter the cost of petrol per liter: <input type="text" id="cost" value="1.72"> <br></p> <!--Displays an input box that asks the user to type the price they want their petrol to cost-->
+                <p>Enter the amount of petrol purchased: <input type="text" id="purchased"> <br></p> <!--Displays an input box that asks the user to type how much petrol they have purchased-->
+                <div class="container"> <!--Groups the buttons and labels them "Container" for styling purposes -->
+                    <button class="button1" id="calculate">Calculate Cost</button> <!--Creates a button that calculates the total cost-->
+                    <button class="button2" onclick="clearfields()">Clear All</button> <!--Creates a button that clears all written content made by the user-->
+                </div>
+                <p id="totalcost"></p> <!--Displays the calculated cost-->
+               
+                <footer>
+                    &copy; 2015 - 2025 petrolcal.net
+                </footer>
+               
+                <script>
+                    document.getElementById("calculate").addEventListener("click", function() //Calls the calculate button
+                    {
+                        let cost_per_liter = parseFloat(document.getElementById("cost").value) || undefined; //converts the input text from the cost button and converts them into a number
+                        let petrol_purchased = parseFloat(document.getElementById("purchased").value) || undefined; //converts the input text from the purchased button and converts them into a number
+
+                        petrol_total_cost(cost_per_liter, petrol_purchased); //labels the cost_per_liter and petrol_purchased functions as petrol_total_cost
+
+                        if (isNaN(petrol_purchased) || cost_per_liter === "" || petrol_purchased === "") {  //determines if the input made by the user is a number
+                            window.alert("⚠ Please Input a Valid Number ⚠"); //if input is not a number, an windows alert will be displayed
+                            document.getElementById("cost").value = '';
+                            document.getAnimations
+                            document.getElementById("purchased").value = '';
+                            document.getElementById("totalcost").innerHTML = '';
+                        }
+                    });
+
+                    function petrol_total_cost(a, b) { //calls petrol_total_cost and converts cost_per_liter to a and petrol_purchased to b
+                        if (a === undefined) { //if cost_per_liter is undefined, the input will automatically be displayed as 1.72
+                            a = 1.72;
+                        }
+                        if (b === undefined) {//if petrol_purchased is undefined, the input will automatically be displayed as a 0
+                            b = 0;
+                        }
+                        document.getElementById("totalcost").innerHTML = a * b; //multiplies cost_per_liter and petrol_purchased
+                    }
+
+                    function clearfields() { //calls the clear all button and deletes all inputted content made by the user
+                        document.getElementById("cost").value = '';
+                        document.getElementById("cost").value = "1.72"
+                        document.getElementById("purchased").value = '';
+                        document.getElementById("totalcost").innerHTML = '';
+                    }
+                </script>
+            </main>
+        </div>
+    </body>
+</html>
+
