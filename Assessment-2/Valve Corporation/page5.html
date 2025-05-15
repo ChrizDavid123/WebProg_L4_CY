@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Valve corporation</title> <!--title of the website-->
+		<link rel="stylesheet" type="text/css" href="style5.css"> 
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<div class="main-content"> <!--The content of the entire website-->
+			<header>
+				<h1>
+					<img src="valve logo.png" alt="Valve corporation logo" width="300" height="70"> <!--Displays organization logo-->
+				</h1> 	
+			</header>
+
+			<nav> <!--Allows the user to navigate through the pages-->
+				<a href = "page1.html"><b>Home</a> 
+				<a href = "page2.html"><b>About Us</a>
+				<a href = "page3.html"><b>Games</a>
+				<a href = "page4.html"><b>News</a>
+				<a href = "page5.html"><b>Support</a>
+			</nav>
+				
+			<div class="container"> <!--The main content of the website-->
+				<h3 id="introduction">SUPPORT!</h3>
+				<p>Are there any problems that you are experiencing in any of our games, services, or while using this website? Please feel free to report them to us. We are happy to help!</p>
+				
+				<form id="supportbox">
+					<textarea id="support" name="support" required></textarea>
+					<div id="submitbutton">
+						<button type="submit">
+							Submit!
+						</button>
+						<p id="thankyou">
+
+						</p>
+					</div>
+				</form>
+
+				<h3>CONTACT US!</h3>
+				<div class="contacts">
+					<figure> 
+						<a href="https://www.facebook.com/Valve" target="_blank">
+							<img src="facebook logo.webp" alt="facebook" width="100" height="100">
+						</a>
+					</figure>
+					<figure>
+						<a href="https://x.com/valvesoftware?lang=uk" target="_blank">
+							<img src="x logo.webp" alt="x" width="100" height="100">
+						</a>
+					</figure>
+					<figure>
+						<a href="https://www.instagram.com/valvesoftware/" target="_blank">
+							<img src="instagram.webp" alt="instagram" width="100" height="100">
+						</a>
+					</figure>
+					<figure>
+						<a href="https://ae.linkedin.com/company/valve-corporation" target="_blank">
+							<img src="linked in.webp" alt="linked in" width="100" height="100">
+						</a>
+					</figure>
+					<figure>
+						<a href="https://www.reddit.com/r/valve/" target="_blank">
+							<img src="reddi t.webp" alt="reddit" width="100" height="100">
+						</a>
+					</figure>
+				</div>
+			</div>
+			<script> 
+				document.getElementById("supportbox").addEventListener("submit", function (e) {
+					e.preventDefault();
+					const supportbox = document.getElementById("support").value.trim();
+
+					if (!supportbox) {
+						alert("Please fill out the text box before submitting!");
+						return;
+					}
+
+					document.getElementById("thankyou").textContent = "Thank you for submitting!";
+					document.getElementById("supportbox").reset();
+
+				});
+			</script>
+			<footer> <!--footer of the web page-->
+				<img src="valve logo.png" alt="Valve corporation logo" width="100" height="25"><br><br> <!--displays valve logo at footer-->
+				Copyright &copy; 2025 Valve Corporation. All Rights Reserved <!--copyright text-->
+			</footer>
+			
+		</div>
+	</body>	
+</html>
+ 

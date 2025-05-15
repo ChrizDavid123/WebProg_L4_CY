@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Valve corporation</title> <!--title of the website-->
+		<link rel="stylesheet" type="text/css" href="style1.css"> 
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<div class="main-content"> <!--The content of the entire website-->
+			<header>
+				<h1>
+					<img src="valve logo.png" alt="Valve corporation logo" width="300" height="70"> <!--Displays organization logo-->
+				</h1> 	
+			</header>
+
+			<nav> <!--Allows the user to navigate through the pages-->
+				<a href = "page1.html"><b>Home</a> 
+				<a href = "page2.html"><b>About Us</a>
+				<a href = "page3.html"><b>Games</a>
+				<a href = "page4.html"><b>News</a>
+				<a href = "page5.html"><b>Support</a>
+			</nav>
+				
+			<div class="container"> <!--The main content of the website-->
+				<h3 id="introduction">WE MAKE GAMES, STEAM AND HARDWARE!<br>JOIN US!</h3>
+				<p>Welcome to Valve! Here, we make sure that players worldwide <br>get to explore, create memories,
+					and get the best gaming experience <br>from the world's number #1 gaming organization!</p><br>
+				<div class="image"> <!--Displays an image showing an office from valve headquarters-->
+					<img src="Valve headquarters.jpg" alt="Valve headquarters" width="800" height="500">
+				</div>
+
+				<h3><br><br><br>TOP SELLERS:</h3><br>
+				<div class="topsellers1"> <!--groups the top images as topsellers1-->
+					<figure> <!--displays logos of counter strike 2 and half life with figcaption-->
+						<a href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank">
+							<img src="counter strike 2.jpg" alt="Counter Strike 2" width="450" height="270">
+						</a>
+						<figcaption>Counter Strike 2</figcaption>
+					</figure>
+					<figure>
+						<a href="https://store.steampowered.com/app/70/HalfLife/" target="_blank">
+							<img src="half life.webp" alt="Half Life" width="450" height="270">
+						</a>
+						<figcaption>Half Life</figcaption>
+					</figure>
+				</div>
+				<div class="topsellers2"> <!--groups the bottom images as topsellers2-->
+					<figure> <!--displays logos of portal 2 and team fortress 2 with figcaption-->
+						<a href="https://store.steampowered.com/app/620/Portal_2/" target="_blank">
+							<img src="portal 2.avif" alt="Portal 2" width="450" height="270">
+						</a>
+						<figcaption>Portal 2</figcaption>
+					</figure>
+					<figure>
+						<a href="https://store.steampowered.com/app/440/Team_Fortress_2/" target="_blank">
+							<img src="Team fortress.jpg" alt="Team Fortress" width="450" height="270">
+						</a>
+						<figcaption>Team Fortress 2</figcaption>
+					</figure>
+				</div>
+			
+
+				<h3><br><br><br><br>CREATE AN ACCOUNT NOW!!!</h3>
+				<div class="register"> <!--groups the fill in the blanks as register for the user to create an account-->
+					<form id="registerForm"> <!--groups the fill in the blank as registerFrom for javascript-->
+						<label for="first-name">First Name:</label><br> <!--First name of the user-->
+						<input type="text" id="first-name" name="first-name" required><br><br>
+						
+						<label for="last-name">Last Name:</label><br> <!--last name of the user-->
+						<input type="text" id="last-name" name="last-name" required><br><br>
+						
+						<label for="email">Email Address:</label><br> <!--email address of the user-->
+						<input type="email" id="email" name="email" required><br><br>
+					
+						<div class="terms"> <!--groups the terms and conditions as terms-->
+							<label>
+								<input type="checkbox" name="agree" required>
+								I agree to the <a href="#">Terms and Conditions</a><br> <!--check box for terms and conditions-->
+							</label>
+
+							<label>
+								<input type="checkbox" name="emails" required>
+								I confirm I would like to receive emails from valve.com<br><br> <!--check box for emails from valve.com-->
+							</label>
+						</div>
+						<button type="submit"> <!--submit button-->
+							Submit 
+						</button>
+						<p id="thankyou"></p>
+					</form>
+				</div>
+			</div>
+			<script> //Javascript
+				document.getElementById("registerForm").addEventListener("submit", function (e) { //starts the following commands once "submit" is clicked
+					e.preventDefault();
+
+					const firstName = document.getElementById("first-name").value.trim(); //gets the first-name box and placed them in the firstName variable
+					const lastName = document.getElementById("last-name").value.trim(); //gets the lastt-name box and placed them in the lastName variable
+					const email = document.getElementById("email").value.trim(); //gets the email box and placed them in the email variable
+					const termsChecked = document.querySelector('input[name="agree"]').checked; //gets the checkbox "agree" and placed them in the termsChecked variable
+
+					if (!firstName || !lastName || !email || !termsChecked) {
+						alert("Please fill out all the required fields and agree to the terms."); //displays an alert message when one of the top values aren't filled up
+						return;
+					}
+
+					document.getElementById("thankyou").textContent = `Thank you, ${firstName}, for joining us!`; //displays a thank you message
+					document.getElementById("registerForm").reset(); //deletes all the words the user made
+
+					thankyou.style.color = "black"; //sets the "thankyou" paragraph to color black
+					thankyou.style.fontWeight = "bold"; //sets the "thankyou" paragraph to bold
+					thankyou.style.textAlign = "center"; //aligns the "thankyou" paragraph to the center
+				});
+				
+			
+			</script>
+			<footer> <!--footer of the web page-->
+				<img src="valve logo.png" alt="Valve corporation logo" width="100" height="25"><br><br> <!--displays valve logo at footer-->
+				Copyright &copy; 2025 Valve Corporation. All Rights Reserved <!--copyright text-->
+			</footer>
+			
+		</div>
+	</body>	
+</html>
+ 
