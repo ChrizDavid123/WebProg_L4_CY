@@ -4,7 +4,7 @@ html, body { /*sets the entire website with the height of 100%*/
 }
 
 body { /*displays the background image of the website*/
-    background-image: url("Valve Background.avif");
+    background-image: url("pictures/Valve Background.avif");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -35,7 +35,7 @@ nav { /*Decorates the navigation and aligns them in one line*/
     background-color: #2f2d2b;
     color: #f44e44;
     margin-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;       
 }
 
 nav a { /*Changes the font size, color and gaps between the navigation texts*/
@@ -163,3 +163,68 @@ footer {/*designs the footer of the web page*/
     padding: 20px 0;
     font-weight: normal;
 } 
+
+@media (max-width: 768px) {
+    nav {
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px;
+        font-size: 18px;
+    }
+    
+    .image img{
+        width: 100%;
+        height: auto;
+    }
+
+    .topsellers1, .topsellers2 {
+        flex-direction: column;
+    }
+
+    .register {
+        width: 90%;
+        padding-left: 30px;
+        font-size: medium; 
+    }
+
+    .register input {
+        width: 90%;
+    }
+
+    .terms input {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .container h3 {
+        font-size: large;
+    }
+
+    .container p {
+        font-size: medium;
+    }
+
+    .topsellers1 figcaption, 
+    .topsellers2 figcaption {
+        font-size: medium;
+
+    }
+
+    button {
+        font-size: large; 
+        width: 100%;
+    }
+
+    footer { 
+        font-size: 13px;
+    }
+}

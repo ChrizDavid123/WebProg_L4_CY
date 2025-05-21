@@ -4,7 +4,7 @@ html, body { /*sets the entire website with the height of 100%*/
 }
 
 body { /*displays the background image of the website*/
-    background-image: url("Valve Background.avif");
+    background-image: url("pictures/Valve Background.avif");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -94,4 +94,59 @@ footer {/*designs the footer of the web page*/
 
 .video-container { /*aligns the youtube video to the center*/
     text-align: center;
+}
+
+@media (max-width: 768px) {
+   nav {
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .topsellers1, .topsellers2 {
+        flex-direction: column;
+    }
+
+    .container p {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+
+    .container img {
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .container iframe {
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .container h3 {
+        font-size: large;
+    }
+
+    .container p {
+        font-size: medium;
+    }
+
+    footer { 
+        font-size: 13px;
+    }
 }

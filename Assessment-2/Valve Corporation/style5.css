@@ -4,7 +4,7 @@ html, body { /*sets the entire website with the height of 100%*/
 }
 
 body { /*displays the background image of the website*/
-    background-image: url("Valve Background.avif");
+    background-image: url("pictures/Valve Background.avif");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -116,3 +116,76 @@ footer {/*designs the footer of the web page*/
     padding: 20px 0;
     font-weight: normal;
 } 
+
+@media (max-width: 768px) {
+    .main-content nav {
+        display: flex;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .contacts {
+        display: flex;
+    }
+
+    .contacts figure {
+        margin: 10px 0;
+    }
+
+    #supportbox textarea {
+        margin-top: 20px;
+        width: 90%;
+        max-width: 800px;
+        height: 300px;
+    }
+    
+    .container p {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+
+    .container img {
+        margin: 0 auto;
+        max-width: 90%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .container h3 {
+        font-size: large;
+    }
+
+    .container p {
+        font-size: medium;
+    }
+
+    button {
+        font-size: large; 
+        width: 100%;
+    }
+
+    footer { 
+        font-size: 13px;
+    }
+}
